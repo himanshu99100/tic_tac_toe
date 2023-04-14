@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+body{
+    background-color: #5cdb95 ;
+}
+header h2{
+    font-family: Poppins;
+    text-align: center;
+    color: #edf5e1;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px ;
+}
+.container{
+    display: grid;
+    width: 50vw;
+    height: 70vh;
+    /* border: 2px solid  black; */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.cells{
+    border: 0.4rem solid #05396b;
+}
+.cells:first-child,
+.cells:nth-child(2),
+.cells:nth-child(3){
+    border-top: none;
+}
+.cells:nth-child(3n+1){
+    border-left: none;
+}
+.cells:nth-child(3n+3){
+    border-right: none;
+}
+.cells:last-child,
+.cells:nth-child(7),
+.cells:nth-child(8){
+    border-bottom: none;
+}
+.cells:hover{
+      background:#8ee4af;
+}
+.texts{
+    font-family: 'Poppins';
+    display:flex;
+    font-size:5.5rem;
+    justify-content: center;
+    align-items: center;
+    color:#1c6494;
+
+}
+.info{
+    color: #edf5e1;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-weight:bolder;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Poppins';
+}
+.btn{
+    font-family: 'Poppins';
+    margin-left: 50%;
+    border: none;
+    color: #05396b;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin-top: 5vh;
+    cursor: pointer;
+    background-color: #5cdb95;
+   
+}
+.btn:hover{
+    color: #ededed;;
+}
+
+@media (max-width: 600px) and (min-width: 0px) {
+    /* styles for screens with a width less than or equal to 600px */
+    .container{
+        height:50vh;
+        width: 60vw;
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width:  600px) {
+    /* styles for screens with a width less than or equal to 768px and greater than or equal to 992px */
+    .container{
+        height:62vh;
+        width: 70vw;
+    }
+  }
+  
+  @media (max-width: 992px) and (min-width: 768px) {
+    /* styles for screens with a width less than or equal to 992px and greater than or equal to 768px */
+    .container{
+        height:68vh;
+        width: 69vw;
+    }
+  }
